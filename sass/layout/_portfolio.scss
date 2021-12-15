@@ -1,0 +1,109 @@
+.guide {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 50px;
+
+  &__item-btn {
+    background: #f5f4fa;
+    border-radius: 4px;
+    padding: 6px 22px;
+    color: var(--second-btn-color);
+    background-color: var(--second-btn-background-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    border: none;
+    transition-property: color, background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__item-btn:hover,
+  &__item-btn:focus {
+    color: var(--btn-color);
+    background-color: var(--btn-background-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+
+  &__item {
+    border: 1px solid #eeeeee;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    transition-property: box-shadow, background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__item:hover &__item-text {
+    transform: translateY(0);
+  }
+
+  &__item:hover,
+  &__item:focus {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &__item:nth-child(3n + 0) {
+    margin-right: 0;
+  }
+
+  &__item-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background: rgba(33, 150, 243, 0.9);
+    overflow: auto;
+    transform: translateY(100%);
+    transition-property: transform, box-shadow, background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__item-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__info {
+    padding: 20px 0 20px 24px;
+  }
+
+  &__info-title {
+    color: var(--second-title-color);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  &__info-text {
+    font-size: 16px;
+    line-height: 1.85;
+    letter-spacing: 0.03em;
+  }
+}
