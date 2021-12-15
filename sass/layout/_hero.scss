@@ -14,19 +14,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  background-color: var(--first-background-color);
+  background-color: $first-background-color;
 
   &__title {
     margin-bottom: 30px;
     text-align: center;
     width: 696px;
 
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+    @include text(900, 44px, 1.36, 0.06em);
     text-transform: uppercase;
-    color: var(--first-title-color);
+    color: $first-title-color;
   }
 
   &__btn {
@@ -36,12 +33,10 @@
 
     font-family: inherit;
     font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    color: var(--btn-color);
-    background-color: var(--btn-background-color);
+
+    @include text(700, 16px, 1.87, 0.06em);
+    color: $btn-color;
+    background-color: $btn-background-color;
     cursor: pointer;
     border: none;
   }

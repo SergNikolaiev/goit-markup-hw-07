@@ -21,17 +21,13 @@
   &__title {
     margin-bottom: 10px;
 
-    color: var(--second-title-color);
+    color: $second-title-color;
 
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include text(bold, 14px, 1.14, 0.03em);
     text-transform: uppercase;
   }
 
   &__text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include text(400, 14px, 1.71, 0.03em);
   }
 }
