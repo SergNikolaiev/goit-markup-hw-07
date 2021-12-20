@@ -16,6 +16,10 @@ ul {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 30px;
+  }
 }
 
 .section-align {

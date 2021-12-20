@@ -1,13 +1,32 @@
 .features {
-  display: flex;
-  justify-content: space-between;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item:nth-child(2n) {
+      margin-left: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    display: flex;
+    margin-left: -30px;
+    &__item:not(last-child) {
+      margin-left: 30px;
+    }
+  }
 
   &__icon {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 270px;
     height: 120px;
     background: #f5f4fa;
     border-radius: 4px;
@@ -15,7 +34,19 @@
   }
 
   &__item {
-    width: 270px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 480px) {
+      max-width: 450px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
 
   &__title {
@@ -25,6 +56,10 @@
 
     @include text(bold, 14px, 1.14, 0.03em);
     text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__text {
